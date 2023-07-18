@@ -1,0 +1,393 @@
+CRITICAL - 2023-07-18 15:12:44 --> Arquivo inválido: masterpage.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('masterpage.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('masterpage', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(26): view('site/index.php')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 15:13:07 --> Arquivo inválido: masterpage.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('masterpage.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('masterpage.php', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(26): view('site/index.php')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 15:15:34 --> Arquivo inválido: masterpage.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('masterpage.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('masterpage', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(26): view('site/index.php')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 15:15:56 --> Arquivo inválido: site/header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('site/header.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(55): view('site/header.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 15:16:02 --> Arquivo inválido: masterpage.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('masterpage.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('masterpage', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(26): view('site/index.php')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 15:17:29 --> Arquivo inválido: masterpage.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('masterpage.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('masterpage', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(25): view('site/index.php')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-18 16:23:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3 in C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\amde\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\amde\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\amde\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\amde\project\app\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\amde\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#8 C:\wamp64\www\amde\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#9 C:\wamp64\www\amde\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\amde\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-18 16:23:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-18 16:24:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3 in C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\amde\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\amde\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\amde\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\amde\project\app\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\amde\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#8 C:\wamp64\www\amde\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#9 C:\wamp64\www\amde\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\amde\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-18 16:24:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-18 16:24:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3 in C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\amde\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\amde\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\amde\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\amde\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\amde\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\amde\project\app\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\amde\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#8 C:\wamp64\www\amde\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#9 C:\wamp64\www\amde\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\amde\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-18 16:24:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `noticias`
+WHERE Notícia 1
+AND `noticias`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Noticias.php(75): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 16:35:07 --> Using $this when not in object context
+in APPPATH\Helpers\slug_helper.php on line 3.
+ 1 SYSTEMPATH\Common.php(667): include_once()
+ 2 APPPATH\Controllers\Admin\Noticias.php(121): helper([...])
+ 3 APPPATH\Controllers\Admin\Noticias.php(81): App\Controllers\Admin\Noticias->save()
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 16:46:36 --> Undefined property: stdClass::$titulo
+in APPPATH\Views\site\index.php on line 1071.
+ 1 APPPATH\Views\site\index.php(1071): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$titulo', 'APPPATH\\Views\\site\\index.php', 1071, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(35): view('site/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 16:57:52 --> Call to a member function format() on string
+in APPPATH\Views\site\index.php on line 1075.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(36): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 16:58:19 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\site\index.php on line 1075.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(36): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:02:03 --> Class 'Time' not found
+in APPPATH\Views\site\index.php on line 1076.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(37): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:02:14 --> Class 'Time' not found
+in APPPATH\Views\site\index.php on line 1076.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(37): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:07:26 --> syntax error, unexpected 'echo' (T_ECHO)
+in APPPATH\Views\site\index.php on line 1083.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(37): view('site/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:12:13 --> Call to undefined method CodeIgniter\I18n\Time::setLocale()
+in APPPATH\Controllers\Site\Home.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:13:22 --> Class 'Time' not found
+in APPPATH\Views\site\index.php on line 1078.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(40): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:31:07 --> Undefined variable: post
+in APPPATH\Views\site\index.php on line 1055.
+ 1 APPPATH\Views\site\index.php(1055): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: post', 'APPPATH\\Views\\site\\index.php', 1055, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:51:30 --> syntax error, unexpected ';', expecting identifier (T_STRING) or '{'
+in APPPATH\Views\site\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:51:30 --> syntax error, unexpected ';', expecting identifier (T_STRING) or '{'
+in APPPATH\Views\site\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:51:59 --> syntax error, unexpected ';', expecting identifier (T_STRING) or '{'
+in APPPATH\Views\site\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:52:10 --> syntax error, unexpected ';', expecting identifier (T_STRING) or '{'
+in APPPATH\Views\site\index.php on line 2.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:52:22 --> Class 'Time' not found
+in APPPATH\Views\site\index.php on line 1086.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/index.php', [], true)
+ 4 APPPATH\Controllers\Site\Home.php(38): view('site/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:57:51 --> syntax error, unexpected ';', expecting ']'
+in APPPATH\Controllers\Admin\Noticias.php on line 196.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Noticias.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Noticias')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Noticias')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin\\Noticias')
+ 5 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Noticias', true)
+ 6 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:58:00 --> syntax error, unexpected ';', expecting ']'
+in APPPATH\Controllers\Admin\Noticias.php on line 196.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Noticias.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Noticias')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Noticias')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin\\Noticias')
+ 5 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Noticias', true)
+ 6 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:58:12 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Admin\Noticias.php on line 197.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Noticias.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Noticias')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Noticias')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Admin\\Noticias')
+ 5 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Noticias', true)
+ 6 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 17:58:41 --> Call to undefined function App\Controllers\Admin\now()
+in APPPATH\Controllers\Admin\Noticias.php on line 185.
+ 1 APPPATH\Controllers\Admin\Noticias.php(155): App\Controllers\Admin\Noticias->update('21')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->edit('21')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 18:00:34 --> Call to undefined function App\Controllers\Admin\random_string()
+in APPPATH\Controllers\Admin\Noticias.php on line 186.
+ 1 APPPATH\Controllers\Admin\Noticias.php(155): App\Controllers\Admin\Noticias->update('21')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->edit('21')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 18:01:01 --> Call to undefined function App\Controllers\Admin\random_string()
+in APPPATH\Controllers\Admin\Noticias.php on line 186.
+ 1 APPPATH\Controllers\Admin\Noticias.php(155): App\Controllers\Admin\Noticias->update('21')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->edit('21')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

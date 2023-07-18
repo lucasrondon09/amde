@@ -1,0 +1,50 @@
+CRITICAL - 2023-02-16 11:05:50 --> Class "App\Models\Admin\EmailModel" not found
+in APPPATH/Controllers/Admin/Configuracoes.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(887): App\Controllers\Admin\Configuracoes->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 11:23:06 --> Call to undefined function form_open()
+in APPPATH/Views/site/agendamento-exame.php on line 43.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/agendamento-exame', [], true)
+ 4 APPPATH/Controllers/Site/Contatos.php(124): view('site/agendamento-exame', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->agendamentoExame()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 11:29:04 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 93.
+ 1 APPPATH/Controllers/Site/Contatos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 93)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 11:29:36 --> Undefined variable $sent
+in APPPATH/Controllers/Site/Contatos.php on line 93.
+ 1 APPPATH/Controllers/Site/Contatos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sent', 'APPPATH/Controllers/Site/Contatos.php', 93)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->sendMail()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 11:44:29 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH/Controllers/Site/Contatos.php on line 117.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Site/Contatos.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Site\\Contatos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Site\\Contatos')
+ 4 SYSTEMPATH/CodeIgniter.php(875): class_exists('\\App\\Controllers\\Site\\Contatos', true)
+ 5 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 11:44:58 --> Undefined variable $medico
+in APPPATH/Views/site/agendamento-consulta.php on line 64.
+ 1 APPPATH/Views/site/agendamento-consulta.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medico', 'APPPATH/Views/site/agendamento-consulta.php', 64)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/site/agendamento-consulta.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/agendamento-consulta', [], true)
+ 5 APPPATH/Controllers/Site/Contatos.php(117): view('site/agendamento-consulta', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Contatos->agendamentoConsulta()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

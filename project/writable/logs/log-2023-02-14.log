@@ -1,0 +1,86 @@
+ERROR - 2023-02-14 10:43:38 --> mysqli_sql_exception: Table 'axonsneuro.paginas' doesn't exist in /home/storage/d/84/d2/axonsneurologia1/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 /home/storage/d/84/d2/axonsneurologia1/project/system/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 /home/storage/d/84/d2/axonsneurologia1/project/system/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 /home/storage/d/84/d2/axonsneurologia1/project/app/Controllers/Admin/Paginas.php(41): CodeIgniter\BaseModel->paginate(10)
+#7 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(925): App\Controllers\Admin\Paginas->index()
+#8 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Paginas))
+#9 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /home/storage/d/84/d2/axonsneurologia1/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-02-14 10:43:38 --> Table 'axonsneuro.paginas' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `paginas`
+WHERE `paginas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `paginas`
+WHERE `paginas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `paginas`
+WHERE `paginas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `paginas`
+WHERE `paginas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH/Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH/BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH/Controllers/Admin/Paginas.php(41): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Paginas->index()
+ 9 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Paginas))
+10 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-14 11:10:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`axonsneuro`.`paginas`, CONSTRAINT `paginas-categorias` FOREIGN KEY (`idCategoria`) REFERENCES `paginas_categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) in /home/storage/d/84/d2/axonsneurologia1/project/system/Database/MySQLi/Connection.php:292
+Stack trace:
+#0 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `pa...', 0)
+#1 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 /home/storage/d/84/d2/axonsneurologia1/project/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 /home/storage/d/84/d2/axonsneurologia1/project/system/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 /home/storage/d/84/d2/axonsneurologia1/project/system/BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 /home/storage/d/84/d2/axonsneurologia1/project/system/Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 /home/storage/d/84/d2/axonsneurologia1/project/app/Controllers/Admin/Paginas.php(113): CodeIgniter\Model->insert(Array)
+#8 /home/storage/d/84/d2/axonsneurologia1/project/app/Controllers/Admin/Paginas.php(71): App\Controllers\Admin\Paginas->save()
+#9 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(925): App\Controllers\Admin\Paginas->create()
+#10 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Paginas))
+#11 /home/storage/d/84/d2/axonsneurologia1/project/system/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /home/storage/d/84/d2/axonsneurologia1/public_html/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-14 11:10:46 --> Cannot add or update a child row: a foreign key constraint fails (`axonsneuro`.`paginas`, CONSTRAINT `paginas-categorias` FOREIGN KEY (`idCategoria`) REFERENCES `paginas_categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 292.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(292): mysqli->query('INSERT INTO `paginas` (`titulo`, `subtitulo`, `texto`, `status`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'AXONS\', \'Centro Especializado em Neurologia e Neurofisioaslogia de Mato Grosso\', \'<p class=\\"\\">A Axons é uma empresa composta por neurologistas, neurofisiologistas e neurocirurgiões que buscam trazer alta resolutividade em diagnóstico e tratamento das patologias neurológicas dentro de um único serviço. Cada um dos profissionais atuantes da Axons possui uma área de subespecialização, fornecendo aos nossos pacientes o que há de mais atual dentro da neurologia.                          \\r\\n                        </p>\', \'1\', \'Selecione\', \'https://axonsneurologia.com.br/uploads/img/1676387428.png\', \'2023-02-14 11:10:46\', \'2023-02-14 11:10:46\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `paginas` (`titulo`, `subtitulo`, `texto`, `status`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'AXONS\', \'Centro Especializado em Neurologia e Neurofisioaslogia de Mato Grosso\', \'<p class=\\"\\">A Axons é uma empresa composta por neurologistas, neurofisiologistas e neurocirurgiões que buscam trazer alta resolutividade em diagnóstico e tratamento das patologias neurológicas dentro de um único serviço. Cada um dos profissionais atuantes da Axons possui uma área de subespecialização, fornecendo aos nossos pacientes o que há de mais atual dentro da neurologia.                          \\r\\n                        </p>\', \'1\', \'Selecione\', \'https://axonsneurologia.com.br/uploads/img/1676387428.png\', \'2023-02-14 11:10:46\', \'2023-02-14 11:10:46\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `paginas` (`titulo`, `subtitulo`, `texto`, `status`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'AXONS\', \'Centro Especializado em Neurologia e Neurofisioaslogia de Mato Grosso\', \'<p class=\\"\\">A Axons é uma empresa composta por neurologistas, neurofisiologistas e neurocirurgiões que buscam trazer alta resolutividade em diagnóstico e tratamento das patologias neurológicas dentro de um único serviço. Cada um dos profissionais atuantes da Axons possui uma área de subespecialização, fornecendo aos nossos pacientes o que há de mais atual dentro da neurologia.                          \\r\\n                        </p>\', \'1\', \'Selecione\', \'https://axonsneurologia.com.br/uploads/img/1676387428.png\', \'2023-02-14 11:10:46\', \'2023-02-14 11:10:46\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paginas` (`titulo`, `subtitulo`, `texto`, `status`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:titulo:, :subtitulo:, :texto:, :status:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin/Paginas.php(113): CodeIgniter\Model->insert([...])
+ 9 APPPATH/Controllers/Admin/Paginas.php(71): App\Controllers\Admin\Paginas->save()
+10 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Admin\Paginas->create()
+11 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Paginas))
+12 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-14 11:17:17 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH/Controllers/Site/QuemSomos.php on line 21.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Site/QuemSomos.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Site\\QuemSomos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Site\\QuemSomos')
+ 4 SYSTEMPATH/CodeIgniter.php(875): class_exists('\\App\\Controllers\\Site\\QuemSomos', true)
+ 5 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-14 11:18:02 --> Attempt to read property "capa" on null
+in APPPATH/Views/site/sobre.php on line 7.
+ 1 APPPATH/Views/site/sobre.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "capa" on null', 'APPPATH/Views/site/sobre.php', 7)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/site/sobre.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/sobre.php', [], true)
+ 5 APPPATH/Controllers/Site/QuemSomos.php(25): view('site/sobre.php', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\QuemSomos->sobre()
+ 7 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\QuemSomos))
+ 8 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

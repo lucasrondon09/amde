@@ -1,0 +1,100 @@
+CRITICAL - 2023-03-01 21:24:49 --> Undefined variable $modelMetaTags
+in APPPATH/Helpers/config_helper.php on line 25.
+ 1 APPPATH/Helpers/config_helper.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelMetaTags', 'APPPATH/Helpers/config_helper.php', 25)
+ 2 APPPATH/Views/site/header.php(5): redesSociais()
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/site/header.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 6 APPPATH/Controllers/Site/Home.php(46): view('site/header.php', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 21:27:08 --> Undefined constant "META"
+in APPPATH/Views/site/header.php on line 25.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 4 APPPATH/Controllers/Site/Home.php(46): view('site/header.php', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 21:40:20 --> syntax error, unexpected identifier "RONDON", expecting "," or ";"
+in APPPATH/Views/site/header.php on line 28.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 3 APPPATH/Controllers/Site/Home.php(46): view('site/header.php', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 5 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:12:17 --> Undefined property: App\Controllers\Site\Home::$validation
+in APPPATH/Controllers/Site/Home.php on line 60.
+ 1 APPPATH/Controllers/Site/Home.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Site\\Home::$validation', 'APPPATH/Controllers/Site/Home.php', 60)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:13:02 --> Undefined property: App\Controllers\Site\Home::$validation
+in APPPATH/Controllers/Site/Home.php on line 60.
+ 1 APPPATH/Controllers/Site/Home.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Site\\Home::$validation', 'APPPATH/Controllers/Site/Home.php', 60)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:24:03 --> Attempt to read property "email" on array
+in APPPATH/Controllers/Site/Home.php on line 75.
+ 1 APPPATH/Controllers/Site/Home.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on array', 'APPPATH/Controllers/Site/Home.php', 75)
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:41:31 --> syntax error, unexpected token "if"
+in APPPATH/Controllers/Site/Home.php on line 71.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Site/Home.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Site\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Site\\Home')
+ 4 SYSTEMPATH/CodeIgniter.php(875): class_exists('\\App\\Controllers\\Site\\Home', true)
+ 5 SYSTEMPATH/CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:42:47 --> Call to undefined function App\Controllers\Site\leadsInsert()
+in APPPATH/Controllers/Site/Home.php on line 69.
+ 1 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 2 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:43:29 --> Using $this when not in object context
+in APPPATH/Helpers/leads_helper.php on line 10.
+ 1 APPPATH/Controllers/Site/Home.php(69): leadsInsert([...])
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:44:29 --> Using $this when not in object context
+in APPPATH/Helpers/leads_helper.php on line 16.
+ 1 APPPATH/Controllers/Site/Home.php(69): leadsInsert([...])
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:44:46 --> Using $this when not in object context
+in APPPATH/Helpers/leads_helper.php on line 16.
+ 1 APPPATH/Controllers/Site/Home.php(69): leadsInsert([...])
+ 2 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 3 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-01 22:45:27 --> Constant INSTAGRAM already defined
+in APPPATH/Views/site/header.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Constant INSTAGRAM already defined', 'APPPATH/Views/site/header.php', 9)
+ 2 APPPATH/Views/site/header.php(9): define('INSTAGRAM', 'https://www.instagram.com/axonsmt/?next=%2F')
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/site/header.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 6 APPPATH/Controllers/Site/Home.php(79): view('site/header.php')
+ 7 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->newsletter()
+ 8 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 9 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

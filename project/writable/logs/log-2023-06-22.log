@@ -1,0 +1,113 @@
+CRITICAL - 2023-06-22 15:36:58 --> Creation of dynamic property App\Controllers\Site\Home::$validation is deprecated
+in APPPATH\Controllers\Site\Home.php on line 17.
+ 1 APPPATH\Controllers\Site\Home.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Site\\Home::$validation is deprecated', 'APPPATH\\Controllers\\Site\\Home.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Site\Home->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:17:28 --> Undefined variable: servicos
+in APPPATH\Views\site\header.php on line 94.
+ 1 APPPATH\Views\site\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servicos', 'APPPATH\\Views\\site\\header.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(24): view('site/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:17:48 --> Undefined variable: servicos
+in APPPATH\Views\site\header.php on line 94.
+ 1 APPPATH\Views\site\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servicos', 'APPPATH\\Views\\site\\header.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(56): view('site/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->servicos(25)
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:18:08 --> Undefined variable: servicos
+in APPPATH\Views\site\header.php on line 94.
+ 1 APPPATH\Views\site\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servicos', 'APPPATH\\Views\\site\\header.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 5 APPPATH\Controllers\Site\QuemSomos.php(24): view('site/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\QuemSomos->sobre()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\QuemSomos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:23:42 --> Undefined variable: servicos
+in APPPATH\Views\site\header.php on line 94.
+ 1 APPPATH\Views\site\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servicos', 'APPPATH\\Views\\site\\header.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(57): view('site/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->servicos('22')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:26:58 --> Trying to get property 'titulo' of non-object
+in APPPATH\Views\site\servicos-detalhes.php on line 8.
+ 1 APPPATH\Views\site\servicos-detalhes.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'titulo\' of non-object', 'APPPATH\\Views\\site\\servicos-detalhes.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\servicos-detalhes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/servicos-detalhes.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(44): view('site/servicos-detalhes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->servicos('geologia')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:27:08 --> Trying to get property 'titulo' of non-object
+in APPPATH\Views\site\servicos-detalhes.php on line 8.
+ 1 APPPATH\Views\site\servicos-detalhes.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'titulo\' of non-object', 'APPPATH\\Views\\site\\servicos-detalhes.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\servicos-detalhes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/servicos-detalhes.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(44): view('site/servicos-detalhes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->servicos('geologia')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:27:15 --> Trying to get property 'titulo' of non-object
+in APPPATH\Views\site\servicos-detalhes.php on line 8.
+ 1 APPPATH\Views\site\servicos-detalhes.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'titulo\' of non-object', 'APPPATH\\Views\\site\\servicos-detalhes.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\servicos-detalhes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/servicos-detalhes.php', [], true)
+ 5 APPPATH\Controllers\Site\Servicos.php(44): view('site/servicos-detalhes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Servicos->servicos('geologia')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Servicos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:28:05 --> syntax error, unexpected '$servicoItem' (T_VARIABLE), expecting ')'
+in APPPATH\Views\site\header.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(55): view('site/header.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:28:07 --> syntax error, unexpected '$servicoItem' (T_VARIABLE), expecting ')'
+in APPPATH\Views\site\header.php on line 100.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(55): view('site/header.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 16:31:38 --> Undefined variable: servicos
+in APPPATH\Views\site\header.php on line 94.
+ 1 APPPATH\Views\site\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servicos', 'APPPATH\\Views\\site\\header.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/header', [], true)
+ 5 APPPATH\Controllers\Site\Contatos.php(19): view('site/header')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Contatos->contatos()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Contatos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

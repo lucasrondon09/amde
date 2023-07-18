@@ -1,0 +1,205 @@
+CRITICAL - 2023-06-19 14:28:09 --> Creation of dynamic property App\Controllers\Site\Home::$validation is deprecated
+in APPPATH\Controllers\Site\Home.php on line 16.
+ 1 APPPATH\Controllers\Site\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Site\\Home::$validation is deprecated', 'APPPATH\\Controllers\\Site\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Site\Home->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 14:30:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'axonsneuro', 3306, '', 0)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#4 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#9 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#3 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#6 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-19 14:30:40 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'axonsneuro'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticias`.`id` as `id`, `noticias`.`titulo` as `tituloNoticia`, `noticias`.`texto` as `texto`, `noticias_categorias`.`titulo` as `tituloCategoria`, `noticias`.`capa` as `capa`
+FROM `noticias`
+JOIN `noticias_categorias` ON `noticias`.`idCategoria` = `noticias_categorias`.`id`
+WHERE `status` = :status:
+AND `noticias`.`deleted_at` IS NULL
+ORDER BY `noticias`.`dataNoticia` desc
+ LIMIT 3', [...], false)
+ 3 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(525): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 14:31:59 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'axonsneuro', 3306, '', 0)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#4 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#9 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#3 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#6 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-19 14:31:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'axonsneuro'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticias`.`id` as `id`, `noticias`.`titulo` as `tituloNoticia`, `noticias`.`texto` as `texto`, `noticias_categorias`.`titulo` as `tituloCategoria`, `noticias`.`capa` as `capa`
+FROM `noticias`
+JOIN `noticias_categorias` ON `noticias`.`idCategoria` = `noticias_categorias`.`id`
+WHERE `status` = :status:
+AND `noticias`.`deleted_at` IS NULL
+ORDER BY `noticias`.`dataNoticia` desc
+ LIMIT 3', [...], false)
+ 3 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(525): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 14:37:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'axonsneuro', 3306, '', 0)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#4 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#9 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'axonsneuro' in C:\wamp64\www\prpassos\project\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\prpassos\project\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\prpassos\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticia...', Array, false)
+#3 C:\wamp64\www\prpassos\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\prpassos\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\wamp64\www\prpassos\project\app\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+#6 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+#7 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+#8 C:\wamp64\www\prpassos\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\prpassos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-19 14:37:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'axonsneuro'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `noticias`.`id` as `id`, `noticias`.`titulo` as `tituloNoticia`, `noticias`.`texto` as `texto`, `noticias_categorias`.`titulo` as `tituloCategoria`, `noticias`.`capa` as `capa`
+FROM `noticias`
+JOIN `noticias_categorias` ON `noticias`.`idCategoria` = `noticias_categorias`.`id`
+WHERE `status` = :status:
+AND `noticias`.`deleted_at` IS NULL
+ORDER BY `noticias`.`dataNoticia` desc
+ LIMIT 3', [...], false)
+ 3 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(525): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Site\Home.php(44): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 16:28:24 --> Creation of dynamic property App\Controllers\Site\Home::$validation is deprecated
+in APPPATH\Controllers\Site\Home.php on line 16.
+ 1 APPPATH\Controllers\Site\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Site\\Home::$validation is deprecated', 'APPPATH\\Controllers\\Site\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Site\Home->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 18:42:20 --> syntax error, unexpected end of file
+in APPPATH\Views\site\home.php on line 182.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/home.php', [], true)
+ 3 APPPATH\Controllers\Site\Home.php(56): view('site/home.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 18:42:42 --> Undefined variable: servico
+in APPPATH\Views\site\home.php on line 109.
+ 1 APPPATH\Views\site\home.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: servico', 'APPPATH\\Views\\site\\home.php', 109, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/home.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(56): view('site/home.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 18:43:01 --> Trying to get property 'capa' of non-object
+in APPPATH\Views\site\home.php on line 112.
+ 1 APPPATH\Views\site\home.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'capa\' of non-object', 'APPPATH\\Views\\site\\home.php', 112, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/home.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(56): view('site/home.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 18:43:13 --> Trying to get property 'titulo' of non-object
+in APPPATH\Views\site\home.php on line 114.
+ 1 APPPATH\Views\site\home.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'titulo\' of non-object', 'APPPATH\\Views\\site\\home.php', 114, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/home.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(56): view('site/home.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 18:46:34 --> Use of undefined constant Y - assumed 'Y' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\site\footer.php on line 95.
+ 1 APPPATH\Views\site\footer.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant Y - assumed \'Y\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\site\\footer.php', 95, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\site\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 5 APPPATH\Controllers\Site\Home.php(57): view('site/footer.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

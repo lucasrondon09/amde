@@ -1,0 +1,50 @@
+CRITICAL - 2023-02-24 10:44:08 --> Undefined constant "LINKEDIN"
+in APPPATH/Views/site/footer.php on line 67.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 4 APPPATH/Controllers/Site/Home.php(48): view('site/footer.php')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 10:44:43 --> Undefined constant "LINKEDIN"
+in APPPATH/Views/site/footer.php on line 67.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 4 APPPATH/Controllers/Site/Home.php(48): view('site/footer.php')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 10:45:02 --> Undefined constant "LINKEDIN"
+in APPPATH/Views/site/footer.php on line 67.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 4 APPPATH/Controllers/Site/Home.php(48): view('site/footer.php')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 10:47:58 --> Undefined constant "LINKEDIN"
+in APPPATH/Views/site/footer.php on line 67.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 4 APPPATH/Controllers/Site/Home.php(48): view('site/footer.php')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Home->home()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-24 10:47:59 --> Undefined constant "LINKEDIN"
+in APPPATH/Views/site/footer.php on line 67.
+ 1 SYSTEMPATH/View/View.php(213): include()
+ 2 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('site/footer.php', [], true)
+ 4 APPPATH/Controllers/Site/Exames.php(26): view('site/footer.php')
+ 5 SYSTEMPATH/CodeIgniter.php(925): App\Controllers\Site\Exames->index()
+ 6 SYSTEMPATH/CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Site\Exames))
+ 7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
