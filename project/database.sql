@@ -14,7 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Copiando estrutura para tabela vmi.banners
+-- Copiando estrutura para tabela amde.banners
 CREATE TABLE IF NOT EXISTS `banners` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -30,14 +30,14 @@ CREATE TABLE IF NOT EXISTS `banners` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.banners: ~4 rows (aproximadamente)
+-- Copiando dados para a tabela amde.banners: ~4 rows (aproximadamente)
 INSERT INTO `banners` (`id`, `titulo`, `link`, `texto`, `posicao`, `status`, `imagem`, `imagem_responsiva`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(14, 'Neurologia Clinicia', '', '                          \r\n                        ', 1, 1, 'https://axonsneurologia.com.br/uploads/img/1676127695_c292a9a34de1b7649fa7.jpeg', NULL, '2023-02-11 11:01:35', '2023-02-11 11:02:05', '2023-02-11 11:02:05'),
 	(15, 'Neurologia Clínica', '', '                                                                                                                                  \r\n                                                                                                                        ', 1, 1, 'https://axonsneurologia.com.br/uploads/img/1677605823_edaee83c72594814e7de.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605823_b4a02c89654cc54ad2b4.jpg', '2023-02-11 11:01:53', '2023-02-28 13:37:03', NULL),
 	(16, 'Especialistas', '', '                                                                                                        \r\n                                                                                                ', 2, 1, 'https://axonsneurologia.com.br/uploads/img/1677605846_d2f572c936755b7bf423.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605846_7da774eae070cc441733.jpg', '2023-02-11 11:03:47', '2023-02-28 13:37:26', NULL),
 	(17, 'Atendimento', '', '                                                                                                        \r\n                                                                                                ', 3, 1, 'https://axonsneurologia.com.br/uploads/img/1677605873_292f125d9e7f0f524a58.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605873_6034449762c54e486a64.jpg', '2023-02-11 11:04:44', '2023-02-28 13:37:53', NULL);
 
--- Copiando estrutura para tabela vmi.email
+-- Copiando estrutura para tabela amde.email
 CREATE TABLE IF NOT EXISTS `email` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(999) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `email` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela vmi.email: 14 rows
+-- Copiando dados para a tabela amde.email: 14 rows
 /*!40000 ALTER TABLE `email` DISABLE KEYS */;
 INSERT INTO `email` (`id`, `email`, `assunto`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 'site@axonsneurologia.com.br', 'Informações', '2023-02-16 11:06:35', '2023-02-16 11:51:04', '2023-02-16 11:51:04'),
@@ -67,7 +67,7 @@ INSERT INTO `email` (`id`, `email`, `assunto`, `created_at`, `updated_at`, `dele
 	(14, 'izabela@email.com.br', 'Reclamações', '2023-02-24 09:52:11', '2023-02-24 09:52:57', '2023-02-24 09:52:57');
 /*!40000 ALTER TABLE `email` ENABLE KEYS */;
 
--- Copiando estrutura para tabela vmi.galeria
+-- Copiando estrutura para tabela amde.galeria
 CREATE TABLE IF NOT EXISTS `galeria` (
   `id` int NOT NULL AUTO_INCREMENT,
   `idUsuario` int DEFAULT '0',
@@ -85,11 +85,11 @@ CREATE TABLE IF NOT EXISTS `galeria` (
   CONSTRAINT `galeria_usuarios` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.galeria: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela amde.galeria: ~0 rows (aproximadamente)
 INSERT INTO `galeria` (`id`, `idUsuario`, `idCategoria`, `titulo`, `capa`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 149, 8, 'Infraestrutura', 'https://axonsneurologia.com.br/uploads/img/1676131112.png', 1, '2023-02-11 11:57:56', '2023-02-11 11:58:34', NULL);
 
--- Copiando estrutura para tabela vmi.galeria_categorias
+-- Copiando estrutura para tabela amde.galeria_categorias
 CREATE TABLE IF NOT EXISTS `galeria_categorias` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -99,11 +99,11 @@ CREATE TABLE IF NOT EXISTS `galeria_categorias` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.galeria_categorias: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela amde.galeria_categorias: ~0 rows (aproximadamente)
 INSERT INTO `galeria_categorias` (`id`, `titulo`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(8, 'Axons', '2023-02-11 11:57:31', '2023-02-11 11:57:31', NULL);
 
--- Copiando estrutura para tabela vmi.galeria_imagens
+-- Copiando estrutura para tabela amde.galeria_imagens
 CREATE TABLE IF NOT EXISTS `galeria_imagens` (
   `id` int NOT NULL AUTO_INCREMENT,
   `idGaleria` int DEFAULT NULL,
@@ -116,13 +116,13 @@ CREATE TABLE IF NOT EXISTS `galeria_imagens` (
   CONSTRAINT `galeria_images` FOREIGN KEY (`idGaleria`) REFERENCES `galeria` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.galeria_imagens: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela amde.galeria_imagens: ~3 rows (aproximadamente)
 INSERT INTO `galeria_imagens` (`id`, `idGaleria`, `imagem`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(103, 1, 'https://axonsneurologia.com.br/uploads/img/1676131216_e1c42f9cebca9ccc4934.webp', '2023-02-11 12:00:16', '2023-02-11 12:00:16', NULL),
 	(104, 1, 'https://axonsneurologia.com.br/uploads/img/1676131216_17badd37d882cff3a60d.webp', '2023-02-11 12:00:16', '2023-02-11 12:00:16', NULL),
 	(105, 1, 'https://axonsneurologia.com.br/uploads/img/1676131216_f85c946b992c5c91ca31.webp', '2023-02-11 12:00:16', '2023-02-11 12:00:16', NULL);
 
--- Copiando estrutura para tabela vmi.google_analytics
+-- Copiando estrutura para tabela amde.google_analytics
 CREATE TABLE IF NOT EXISTS `google_analytics` (
   `id` int NOT NULL AUTO_INCREMENT,
   `script` varchar(9999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -132,13 +132,13 @@ CREATE TABLE IF NOT EXISTS `google_analytics` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.google_analytics: 1 rows
+-- Copiando dados para a tabela amde.google_analytics: 1 rows
 /*!40000 ALTER TABLE `google_analytics` DISABLE KEYS */;
 INSERT INTO `google_analytics` (`id`, `script`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, NULL, '2023-02-08 00:00:00', '2023-02-08 00:00:00', NULL);
 /*!40000 ALTER TABLE `google_analytics` ENABLE KEYS */;
 
--- Copiando estrutura para tabela vmi.leads
+-- Copiando estrutura para tabela amde.leads
 CREATE TABLE IF NOT EXISTS `leads` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(999) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `leads` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela vmi.leads: 7 rows
+-- Copiando dados para a tabela amde.leads: 7 rows
 /*!40000 ALTER TABLE `leads` DISABLE KEYS */;
 INSERT INTO `leads` (`id`, `nome`, `email`, `telefone`, `cpf`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, NULL, 'lucasrondon@gmail.com', NULL, NULL, '2023-02-07 10:12:10', '2023-02-07 10:12:10', NULL),
@@ -163,7 +163,7 @@ INSERT INTO `leads` (`id`, `nome`, `email`, `telefone`, `cpf`, `created_at`, `up
 	(7, NULL, 'lucas@email.com', NULL, NULL, '2023-06-19 15:04:32', '2023-06-19 15:04:32', NULL);
 /*!40000 ALTER TABLE `leads` ENABLE KEYS */;
 
--- Copiando estrutura para tabela vmi.meta_tags
+-- Copiando estrutura para tabela amde.meta_tags
 CREATE TABLE IF NOT EXISTS `meta_tags` (
   `id` int NOT NULL AUTO_INCREMENT,
   `descricao` varchar(9999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -174,13 +174,13 @@ CREATE TABLE IF NOT EXISTS `meta_tags` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.meta_tags: 1 rows
+-- Copiando dados para a tabela amde.meta_tags: 1 rows
 /*!40000 ALTER TABLE `meta_tags` DISABLE KEYS */;
 INSERT INTO `meta_tags` (`id`, `descricao`, `palavras_chave`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, '###', '###', '2023-02-08 00:00:00', '2023-06-19 14:42:10', NULL);
 /*!40000 ALTER TABLE `meta_tags` ENABLE KEYS */;
 
--- Copiando estrutura para tabela vmi.noticias
+-- Copiando estrutura para tabela amde.noticias
 CREATE TABLE IF NOT EXISTS `noticias` (
   `id` int NOT NULL AUTO_INCREMENT,
   `idCategoria` int DEFAULT NULL,
@@ -190,6 +190,7 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   `texto` mediumtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `capa` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `dataNoticia` date DEFAULT NULL,
+  `slug` varchar(999) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `status` int DEFAULT '0',
   `visualizacoes` int DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
@@ -200,15 +201,22 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   KEY `noticia-usuario` (`idUsuario`),
   CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`),
   CONSTRAINT `noticia-usuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.noticias: ~3 rows (aproximadamente)
-INSERT INTO `noticias` (`id`, `idCategoria`, `idUsuario`, `titulo`, `subtitulo`, `texto`, `capa`, `dataNoticia`, `status`, `visualizacoes`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(18, 10, 149, 'Notícia 1', '', '                                                    <span style="color: rgb(0, 0, 0); font-family: "Open Sans", Arial, sans-serif; font-size: 14px; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet leo tellus, ac egestas lectus feugiat eu. Nulla eu efficitur urna. Vivamus at massa sit amet nisl tincidunt vulputate sit amet non velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc lacinia justo ipsum, ut varius leo suscipit a. Morbi et fringilla risus. Ut dictum venenatis purus commodo porta.</span>                          \r\n                                                                        ', 'https://axonsneurologia.com.br/uploads/img/1675519769.png', '2023-02-03', 1, NULL, '2023-02-03 17:37:11', '2023-02-04 10:09:32', NULL),
-	(19, 10, 149, 'Notícia 2', '', '                                                                              \r\n                                                                        ', 'https://axonsneurologia.com.br/uploads/img/1675519809.png', '2023-02-03', 1, NULL, '2023-02-03 17:37:41', '2023-02-04 10:10:11', NULL),
-	(21, 10, 149, 'Notícia 3', '', '                                                    \r\n                                                ', 'https://axonsneurologia.com.br/uploads/img/1675519834.png', '2023-02-03', 1, NULL, '2023-02-03 17:38:52', '2023-02-04 10:10:37', NULL);
+-- Copiando dados para a tabela amde.noticias: ~3 rows (aproximadamente)
+INSERT INTO `noticias` (`id`, `idCategoria`, `idUsuario`, `titulo`, `subtitulo`, `texto`, `capa`, `dataNoticia`, `slug`, `status`, `visualizacoes`, `created_at`, `updated_at`, `deleted_at`) VALUES
+	(18, 10, 149, 'Notícia 1', 'Subtituto da Notícia 1', '                                                                                                                                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus erat ut libero malesuada, id pellentesque odio lacinia. Duis mollis rhoncus felis, nec vulputate libero efficitur nec. Fusce euismod posuere elit, et interdum ipsum consectetur vel. Vestibulum eu purus id justo pharetra ultricies. Integer efficitur rhoncus mi nec elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent cursus ipsum nec dictum venenatis. Sed eu leo ut dui lacinia malesuada. Nulla facilisi. Duis cursus dolor eu enim scelerisque fringilla. Aenean in cursus arcu. Suspendisse ullamcorper, tellus eget euismod fringilla, justo erat ultrices tortor, a sollicitudin libero libero a nibh. Suspendisse potenti. Vivamus eu ligula felis. Integer sit amet tortor eu elit posuere convallis.</div><div><br></div><div>Vivamus at quam tristique, iaculis elit id, dignissim erat. Sed vel purus in nulla egestas convallis. Nulla facilisi. Sed ut ex id mauris suscipit efficitur a non sapien. Integer vitae scelerisque velit. Nulla facilisi. Nam vel aliquam risus. Fusce dapibus, nisl non malesuada gravida, tellus neque malesuada enim, ac gravida quam massa vel quam. Quisque finibus neque eget sapien interdum eleifend. Cras eu lorem et lectus malesuada sagittis. In et nisi sapien.</div><div><br></div><div>Suspendisse potenti. Vivamus bibendum felis at semper consequat. Nunc et pellentesque velit. Fusce tincidunt libero vel libero fermentum, nec faucibus orci feugiat. Vestibulum consectetur laoreet orci, id bibendum purus congue eu. Duis eget velit vel libero malesuada facilisis at a est. Vivamus a mauris mauris. Quisque a efficitur mi. Ut facilisis purus et ultrices tincidunt. Quisque pulvinar lorem nec purus fringilla posuere. Aliquam congue libero eget arcu lacinia volutpat. Etiam ut leo eu elit rhoncus consectetur a nec odio. Phasellus sit amet ultricies libero. Mauris maximus diam sed neque finibus, a fringilla nisl volutpat. Fusce ac enim at arcu semper faucibus at nec sem.</div><div><br></div><div>Espero que esse texto seja útil! Lembre-se de que o "Lorem Ipsum" é uma sequência de texto fictícia usada como espaço reservado para fins de demonstração e tipografia.</div>                                                                                                                        ', 'http://local.amde/uploads/img/1689715637.png', '2023-02-03', 'noticia-1', 1, NULL, '2023-02-03 17:37:11', '2023-07-18 17:41:46', NULL),
+	(19, 10, 149, 'Notícia 2', 'Subtitulo da noticia 2', '                                                                              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus erat ut libero malesuada, id pellentesque odio lacinia. Duis mollis rhoncus felis, nec vulputate libero efficitur nec. Fusce euismod posuere elit, et interdum ipsum consectetur vel. Vestibulum eu purus id justo pharetra ultricies. Integer efficitur rhoncus mi nec elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent cursus ipsum nec dictum venenatis. Sed eu leo ut dui lacinia malesuada. Nulla facilisi. Duis cursus dolor eu enim scelerisque fringilla. Aenean in cursus arcu. Suspendisse ullamcorper, tellus eget euismod fringilla, justo erat ultrices tortor, a sollicitudin libero libero a nibh. Suspendisse potenti. Vivamus eu ligula felis. Integer sit amet tortor eu elit posuere convallis.</div><div><br></div><div>Vivamus at quam tristique, iaculis elit id, dignissim erat. Sed vel purus in nulla egestas convallis. Nulla facilisi. Sed ut ex id mauris suscipit efficitur a non sapien. Integer vitae scelerisque velit. Nulla facilisi. Nam vel aliquam risus. Fusce dapibus, nisl non malesuada gravida, tellus neque malesuada enim, ac gravida quam massa vel quam. Quisque finibus neque eget sapien interdum eleifend. Cras eu lorem et lectus malesuada sagittis. In et nisi sapien.</div><div><br></div><div>Suspendisse potenti. Vivamus bibendum felis at semper consequat. Nunc et pellentesque velit. Fusce tincidunt libero vel libero fermentum, nec faucibus orci feugiat. Vestibulum consectetur laoreet orci, id bibendum purus congue eu. Duis eget velit vel libero malesuada facilisis at a est. Vivamus a mauris mauris. Quisque a efficitur mi. Ut facilisis purus et ultrices tincidunt. Quisque pulvinar lorem nec purus fringilla posuere. Aliquam congue libero eget arcu lacinia volutpat. Etiam ut leo eu elit rhoncus consectetur a nec odio. Phasellus sit amet ultricies libero. Mauris maximus diam sed neque finibus, a fringilla nisl volutpat. Fusce ac enim at arcu semper faucibus at nec sem.</div><div><br></div><div>Espero que esse texto seja útil! Lembre-se de que o "Lorem Ipsum" é uma sequência de texto fictícia usada como espaço reservado para fins de demonstração e tipografia.</div>                                                                                                        \r\n                                                                                                                                                                        ', 'http://local.amde/uploads/img/1689715659.png', '2023-02-03', 'noticia-2', 1, NULL, '2023-02-03 17:37:41', '2023-07-18 17:41:52', NULL),
+	(21, 10, 149, 'Notícia 3', 'Subtítulo da notícia 3', '                                                                                                                                                                                                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus erat ut libero malesuada, id pellentesque odio lacinia. Duis mollis rhoncus felis, nec vulputate libero efficitur nec. Fusce euismod posuere elit, et interdum ipsum consectetur vel. Vestibulum eu purus id justo pharetra ultricies. Integer efficitur rhoncus mi nec elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent cursus ipsum nec dictum venenatis. Sed eu leo ut dui lacinia malesuada. Nulla facilisi. Duis cursus dolor eu enim scelerisque fringilla. Aenean in cursus arcu. Suspendisse ullamcorper, tellus eget euismod fringilla, justo erat ultrices tortor, a sollicitudin libero libero a nibh. Suspendisse potenti. Vivamus eu ligula felis. Integer sit amet tortor eu elit posuere convallis.</div><div><br></div><div>Vivamus at quam tristique, iaculis elit id, dignissim erat. Sed vel purus in nulla egestas convallis. Nulla facilisi. Sed ut ex id mauris suscipit efficitur a non sapien. Integer vitae scelerisque velit. Nulla facilisi. Nam vel aliquam risus. Fusce dapibus, nisl non malesuada gravida, tellus neque malesuada enim, ac gravida quam massa vel quam. Quisque finibus neque eget sapien interdum eleifend. Cras eu lorem et lectus malesuada sagittis. In et nisi sapien.</div><div><br></div><div>Suspendisse potenti. Vivamus bibendum felis at semper consequat. Nunc et pellentesque velit. Fusce tincidunt libero vel libero fermentum, nec faucibus orci feugiat. Vestibulum consectetur laoreet orci, id bibendum purus congue eu. Duis eget velit vel libero malesuada facilisis at a est. Vivamus a mauris mauris. Quisque a efficitur mi. Ut facilisis purus et ultrices tincidunt. Quisque pulvinar lorem nec purus fringilla posuere. Aliquam congue libero eget arcu lacinia volutpat. Etiam ut leo eu elit rhoncus consectetur a nec odio. Phasellus sit amet ultricies libero. Mauris maximus diam sed neque finibus, a fringilla nisl volutpat. Fusce ac enim at arcu semper faucibus at nec sem.</div><div><br></div><div>Espero que esse texto seja útil! Lembre-se de que o "Lorem Ipsum" é uma sequência de texto fictícia usada como espaço reservado para fins de demonstração e tipografia.</div>                                                                              \r\n                                                                                                                                                                                                                                                                        ', 'http://local.amde/uploads/img/1689715685.png', '2023-01-10', 'noticia-3', 1, NULL, '2023-02-03 17:38:52', '2023-07-18 18:05:28', NULL),
+	(22, 10, 149, 'testes', 'testes', '                          <div><div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus erat ut libero malesuada, id pellentesque odio lacinia. Duis mollis rhoncus felis, nec vulputate libero efficitur nec. Fusce euismod posuere elit, et interdum ipsum consectetur vel. Vestibulum eu purus id justo pharetra ultricies. Integer efficitur rhoncus mi nec elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent cursus ipsum nec dictum venenatis. Sed eu leo ut dui lacinia malesuada. Nulla facilisi. Duis cursus dolor eu enim scelerisque fringilla. Aenean in cursus arcu. Suspendisse ullamcorper, tellus eget euismod fringilla, justo erat ultrices tortor, a sollicitudin libero libero a nibh. Suspendisse potenti. Vivamus eu ligula felis. Integer sit amet tortor eu elit posuere convallis.</div><div><br></div><div>Vivamus at quam tristique, iaculis elit id, dignissim erat. Sed vel purus in nulla egestas convallis. Nulla facilisi. Sed ut ex id mauris suscipit efficitur a non sapien. Integer vitae scelerisque velit. Nulla facilisi. Nam vel aliquam risus. Fusce dapibus, nisl non malesuada gravida, tellus neque malesuada enim, ac gravida quam massa vel quam. Quisque finibus neque eget sapien interdum eleifend. Cras eu lorem et lectus malesuada sagittis. In et nisi sapien.</div><div><br></div><div>Suspendisse potenti. Vivamus bibendum felis at semper consequat. Nunc et pellentesque velit. Fusce tincidunt libero vel libero fermentum, nec faucibus orci feugiat. Vestibulum consectetur laoreet orci, id bibendum purus congue eu. Duis eget velit vel libero malesuada facilisis at a est. Vivamus a mauris mauris. Quisque a efficitur mi. Ut facilisis purus et ultrices tincidunt. Quisque pulvinar lorem nec purus fringilla posuere. Aliquam congue libero eget arcu lacinia volutpat. Etiam ut leo eu elit rhoncus consectetur a nec odio. Phasellus sit amet ultricies libero. Mauris maximus diam sed neque finibus, a fringilla nisl volutpat. Fusce ac enim at arcu semper faucibus at nec sem.</div><div><br></div><div>Espero que esse texto seja útil! Lembre-se de que o "Lorem Ipsum" é uma sequência de texto fictícia usada como espaço reservado para fins de demonstração e tipografia.</div></div>                        ', 'http://local.amde/uploads/img/1689711931.png', '2023-04-18', NULL, 1, NULL, '2023-07-18 16:25:33', '2023-07-18 17:16:49', '2023-07-18 17:16:49'),
+	(23, 10, 149, 'Notícia 1', 'teste', 'stest', '', '2023-04-18', NULL, 1, NULL, '2023-07-18 16:29:02', '2023-07-18 17:16:53', '2023-07-18 17:16:53'),
+	(24, 10, 149, 'Notícia 10', 'testes', 'tseet', '', '2023-04-18', NULL, 1, NULL, '2023-07-18 16:30:43', '2023-07-18 17:16:57', '2023-07-18 17:16:57'),
+	(25, 10, 149, 'Notícia 11', 'Teste', 'testes', '', '2023-04-18', 'notícia-11', 1, NULL, '2023-07-18 16:31:52', '2023-07-18 17:17:03', '2023-07-18 17:17:03'),
+	(26, 10, 149, 'Notícia 15', 'teste', 'teste', '', '2023-04-18', 'notícia-15', 1, NULL, '2023-07-18 16:35:32', '2023-07-18 17:17:05', '2023-07-18 17:17:05'),
+	(27, 10, 149, 'Notícia 16', 'teste', 'teste', '', '2023-04-18', 'noticia-16', 1, NULL, '2023-07-18 16:37:41', '2023-07-18 17:17:08', '2023-07-18 17:17:08'),
+	(28, 10, 149, 'Notícia 30', 'Subtítulo da notícia 30', 'Teste', '', '2023-07-18', 'noticia-30-6CXPOlLWUpSQa1Tt', 1, NULL, '2023-07-18 18:05:01', '2023-07-18 18:05:22', '2023-07-18 18:05:22');
 
--- Copiando estrutura para tabela vmi.noticias_categorias
+-- Copiando estrutura para tabela amde.noticias_categorias
 CREATE TABLE IF NOT EXISTS `noticias_categorias` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -218,11 +226,11 @@ CREATE TABLE IF NOT EXISTS `noticias_categorias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.noticias_categorias: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela amde.noticias_categorias: ~0 rows (aproximadamente)
 INSERT INTO `noticias_categorias` (`id`, `titulo`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(10, 'Axons', '2023-02-03 17:36:40', '2023-02-03 17:36:40', NULL);
+	(10, 'Geral', '2023-02-03 17:36:40', '2023-07-18 16:25:47', NULL);
 
--- Copiando estrutura para tabela vmi.noticias_imagens
+-- Copiando estrutura para tabela amde.noticias_imagens
 CREATE TABLE IF NOT EXISTS `noticias_imagens` (
   `id` int NOT NULL AUTO_INCREMENT,
   `idNoticia` int DEFAULT NULL,
@@ -235,13 +243,13 @@ CREATE TABLE IF NOT EXISTS `noticias_imagens` (
   CONSTRAINT `noticia_images` FOREIGN KEY (`idNoticia`) REFERENCES `noticias` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.noticias_imagens: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela amde.noticias_imagens: ~3 rows (aproximadamente)
 INSERT INTO `noticias_imagens` (`id`, `idNoticia`, `imagem`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 18, 'https://axonsneurologia.com.br/uploads/img/1677245336_c46ab6811aaa156e828c.jpg', '2023-02-24 09:28:56', '2023-02-24 09:29:59', '2023-02-24 09:29:59'),
 	(2, 18, 'https://axonsneurologia.com.br/uploads/img/1677245336_215dd96c9c8420783646.jpg', '2023-02-24 09:28:56', '2023-02-24 09:30:04', '2023-02-24 09:30:04'),
 	(3, 18, 'https://axonsneurologia.com.br/uploads/img/1677245336_28ad11bc951f68613070.jpg', '2023-02-24 09:28:56', '2023-02-24 09:30:08', '2023-02-24 09:30:08');
 
--- Copiando estrutura para tabela vmi.paginas
+-- Copiando estrutura para tabela amde.paginas
 CREATE TABLE IF NOT EXISTS `paginas` (
   `id` int NOT NULL AUTO_INCREMENT,
   `idCategoria` int DEFAULT NULL,
@@ -258,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `paginas` (
   CONSTRAINT `paginas-categorias` FOREIGN KEY (`idCategoria`) REFERENCES `paginas_categorias` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.paginas: ~8 rows (aproximadamente)
+-- Copiando dados para a tabela amde.paginas: ~8 rows (aproximadamente)
 INSERT INTO `paginas` (`id`, `idCategoria`, `titulo`, `subtitulo`, `texto`, `capa`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 1, 'Dr° Bruno Reginato Gumiero', 'CRM-MT 6788 | Neurologista com especialização em epilepsia RQE 6786', '                                                    <h3 class="">Neurologista com especialização em epilepsia</h3><div>Possui graduação em Medicina pela Universidade de Cuiabá(2012), especialização em Neurofisiologia e epilepsia pela Universidade Estadual de Campinas(2017) e residencia-medicapela Universidade de Cuiabá(2016).</div><div><br></div><h1 class="">Formação Acadêmica</h1><div>Especialização - Residência médica - 2013 - 2016</div><div><b>Universidade de Cuiabá</b></div><div>Residência médica em: Neurologia</div><div>Número do registro: 245/2013.</div><div><br></div><div>Especialização em Neurofisiologia e epilepsia - 2016 - 2017</div><div><b>Universidade Estadual de Campinas</b></div><div><br></div><div>Especialização em andamento em Pós-graduação em Monitorização Neurológica intra-operatória (MNIO) - 2016 - Atual</div><div><b>Centro de Neurologia de Campinas</b></div><div><br></div><div>Graduação em Medicina - 2006 - 2012</div><div><b>Universidade de Cuiabá </b></div>                          \r\n                                                                        ', 'https://axonsneurologia.com.br/uploads/img/1676386705.png', 1, '2023-02-14 10:58:27', '2023-06-19 18:24:02', '2023-06-19 18:24:02'),
 	(2, 1, 'Drª Larissa Kozow', 'CRM-MT 6362 | Neurologista com formação em dor crônica e neuropatias periféricas /neuromuscular', '<h3 class="">Neurologista com formação em dor crônica e neuropatias periféricas /neuromuscular                          \r\n                        </h3>', 'https://axonsneurologia.com.br/uploads/img/1676386929.png', 1, '2023-02-14 11:02:12', '2023-06-19 18:24:04', '2023-06-19 18:24:04'),
@@ -269,7 +277,7 @@ INSERT INTO `paginas` (`id`, `idCategoria`, `titulo`, `subtitulo`, `texto`, `cap
 	(7, 2, 'VMI Soluções Web', '', '                                                                                                                                                                                                                                                                                                                                                  <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;">Somos uma empresa líder em soluções e serviços de tecnologia web, dedicados a atender as demandas digitais de nossos clientes. Nossa expertise abrange uma ampla gama de serviços, incluindo consultoria personalizada, desenvolvimento de aplicativos e sistemas sob demanda, assim como a criação de sites de alto desempenho.</span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;"><br></span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;">Nossa equipe altamente experiente e talentosa está constantemente em busca de soluções inovadoras, utilizando as mais recentes tecnologias disponíveis no mercado. Através de um processo minucioso de mapeamento e estruturação de sistemas, trabalhamos em estreita colaboração com cada cliente, garantindo que suas necessidades específicas sejam atendidas de forma eficiente.</span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;"><br></span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;">Nosso compromisso principal é proporcionar excelência e impulsionar o sucesso digital de nossos clientes. Acreditamos que cada negócio é único e merece uma abordagem personalizada. Portanto, nos esforçamos para entender profundamente as metas e objetivos de cada cliente, adaptando nossas soluções para alcançar os melhores resultados possíveis.</span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;"><br></span></font></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><font color="#000000" face="Arial"><span style="font-size: 16px; white-space-collapse: preserve;">Seja qual for o desafio tecnológico que você esteja enfrentando, estamos prontos para oferecer soluções sob medida, combinando conhecimento técnico especializado com uma abordagem orientada ao cliente. Junte-se a nós e experimente o que é trabalhar com uma empresa apaixonada por tecnologia e comprometida com o sucesso dos negócios digitais.</span></font></p>                                                                                                                                                                                                                                                                                                                        ', 'http://local.vmi/uploads/img/1687473460.png', 1, '2023-02-14 11:13:05', '2023-06-22 18:37:42', NULL),
 	(11, 1, 'Drº Marlon Figueiredo Alves Correa', 'CRM-MT 8052 | Neurologia geral, com subespecialidade em doenças desmielinizantes ', '                                                                              <div>Médico pela Universidade Federal do Mato Grosso (UFMT)</div><div>Residência Médica em Neurologia - Hospital Israelita Albert Einstein- São Paulo, SP.</div><div>Médico assistente do Hospital Israelita Albert Einstein- São Paulo, SP no centro de referência em Esclerose Múltipla 2018-2020</div><div>Membro Titular da Academia Brasileira de Neurologia</div><div>Título de Neurologista pela associação Brasileira de Neurologia</div>                          \r\n                                                                                                ', 'https://axonsneurologia.com.br/uploads/img/1677513362.png', 1, '2023-02-27 11:18:48', '2023-06-19 18:24:16', '2023-06-19 18:24:16');
 
--- Copiando estrutura para tabela vmi.paginas_categorias
+-- Copiando estrutura para tabela amde.paginas_categorias
 CREATE TABLE IF NOT EXISTS `paginas_categorias` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -279,12 +287,12 @@ CREATE TABLE IF NOT EXISTS `paginas_categorias` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.paginas_categorias: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela amde.paginas_categorias: ~2 rows (aproximadamente)
 INSERT INTO `paginas_categorias` (`id`, `titulo`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 'Corpo Clínico', '2023-02-14 10:56:37', '2023-02-14 10:56:37', NULL),
 	(2, 'PR PASSOS', '2023-02-14 11:09:03', '2023-06-19 17:02:32', NULL);
 
--- Copiando estrutura para tabela vmi.redes_sociais
+-- Copiando estrutura para tabela amde.redes_sociais
 CREATE TABLE IF NOT EXISTS `redes_sociais` (
   `id` int NOT NULL AUTO_INCREMENT,
   `instagram` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -299,20 +307,20 @@ CREATE TABLE IF NOT EXISTS `redes_sociais` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.redes_sociais: 1 rows
+-- Copiando dados para a tabela amde.redes_sociais: 1 rows
 /*!40000 ALTER TABLE `redes_sociais` DISABLE KEYS */;
 INSERT INTO `redes_sociais` (`id`, `instagram`, `facebook`, `linkedin`, `youtube`, `whatsapp`, `tiktok`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, '', '', '', '', '', '', '2023-02-08 00:00:00', '2023-06-19 14:41:39', NULL);
 /*!40000 ALTER TABLE `redes_sociais` ENABLE KEYS */;
 
--- Copiando estrutura para tabela vmi.servicos
+-- Copiando estrutura para tabela amde.servicos
 CREATE TABLE IF NOT EXISTS `servicos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `subtitulo` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `texto` mediumtext CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
   `capa` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `slug` varchar(999) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `slug` varchar(999) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `status` int DEFAULT '0',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
@@ -320,7 +328,7 @@ CREATE TABLE IF NOT EXISTS `servicos` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.servicos: ~10 rows (aproximadamente)
+-- Copiando dados para a tabela amde.servicos: ~10 rows (aproximadamente)
 INSERT INTO `servicos` (`id`, `titulo`, `subtitulo`, `texto`, `capa`, `slug`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(16, 'Doppler Transcraniano', '', '                                                                                                        <p class="">O exame Doppler Transcraniano é usado para avaliar o fluxo sanguíneo nas artérias que fornecem sangue ao cérebro. Ele é realizado usando um transdutor Doppler e um gel condutor, colocado na parte frontal da cabeça. O exame é indicado para avaliar o risco de derrames, identificar a presença de obstruções nas artérias cerebrais, monitorar a evolução de doenças cerebrovasculares, entre outros. É um exame não invasivo e seguro, geralmente realizado com pacientes acordados e conscientes.<br></p><div><br></div><h3 class="">Quando está indicado?</h3><ul><li>Síndrome de vasculite cerebral</li><li>Doenças cerebrovasculares</li><li>Hipertensão intracraniana</li><li>Aneurisma cerebral</li><li>Trombose venosa cerebral</li><li>Estenose arterial da artéria cerebral média.</li></ul><h3 class="">Como é feito o exame?</h3><p class="">O exame Doppler Transcraniano mede o fluxo sanguíneo nas artérias que fornecem sangue para o cérebro. Ele é realizado através de uma transdutora de alta frequência colocada na cabeça que emite ondas sonoras para avaliar o fluxo sanguíneo. O exame pode ser usado para avaliar o fluxo sanguíneo em pacientes com sintomas de insuficiência cerebral.<br></p><h3 class="">Existe alguma contra-indicação?</h3><p class="">Não há contra-indicações para a realização do exame.</p><h3 class="">Qual o preparo necessário para a realização do exame?</h3><p class="">Nenhum preparo especial é necessário para realização do exame.</p><div><br></div>                                                    \r\n                                                                                                                                                ', 'https://axonsneurologia.com.br/uploads/img/1675948512.png', NULL, 1, '2023-02-09 08:44:37', '2023-06-19 18:09:48', '2023-06-19 18:09:48'),
 	(17, 'Eletroneuromiografia', '', '                                                                              <p class="">A eletroneuromiografia (ENMG) é um exame médico que avalia a função dos nervos e músculos. É feito através da inserção de agulhas finas nos músculos e a medição da atividade elétrica dos nervos responsáveis por controlá-los. A ENMG ajuda a diagnosticar problemas como neuropatias, miopatias e outras doenças musculoesqueléticas. É importante para guiar o tratamento e avaliar a progressão da doença. É geralmente indolor e dura cerca de 30 minutos.</p><h3 class="">Quando é indicado?</h3><p class=""></p><ul><li>Doenças nervosas, como neuropatias periféricas e esclerose lateral amiotrófica (ALS).</li><li>Doenças musculares, como distrofia muscular e miastenia grave.</li><li>Problemas com os nervos raquidianos, como radiculopatia e plexopatia.</li><li>Problemas de coordenação motora, como ataxia.</li><li>Lesões nervosas, como compressão de nervos por hérnia de disco.</li><li>Doenças desmielinizantes, como a esclerose múltipla.</li></ul><p></p><h3 class="">Como é feito o exame?</h3><p class="">A eletroneuromiografia é feita através da inserção de agulhas finas em músculos específicos e a medição da atividade elétrica dos nervos que controlam esses músculos. Durante o exame, o paciente pode ser solicitado a contrair o músculo ou realizar movimentos específicos para que a atividade elétrica possa ser registrada e analisada. O exame é geralmente indolor e dura cerca de 30 minutos.</p><h3 class="">Existe alguma contra-indicação?</h3><ul><li>Infecção ativa na área onde será realizado o exame.</li><li>Coagulopatias (problemas com a coagulação sanguínea).</li><li>Gravidez, especialmente no primeiro trimestre.</li><li>Reação alérgica ou sensibilidade aos eletrodos ou outros materiais usados durante o exame.</li></ul><h3 class="">Qual o preparo necessário para a realização do exame?</h3><p class="">Nenhum preparo especial é necessário para realização do exame.<br></p><p>                          \r\n                        </p>                                                                        ', 'https://axonsneurologia.com.br/uploads/img/1675948961.png', NULL, 1, '2023-02-09 09:31:21', '2023-06-19 18:09:50', '2023-06-19 18:09:50'),
@@ -333,7 +341,7 @@ INSERT INTO `servicos` (`id`, `titulo`, `subtitulo`, `texto`, `capa`, `slug`, `s
 	(24, 'Engenharia Sanitária', 'Projetos de engenharia sanitária ', '                                                                                                        <p class="">                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum, enim vel ultrices volutpat, metus ligula ultricies enim, a interdum est est vitae lorem. Donec rutrum varius nunc, sed lacinia diam convallis eu. Suspendisse convallis massa vitae est consectetur, in fermentum est feugiat. Aliquam in tempor dui, sed consequat nisi. Morbi ac fringilla ipsum. Mauris fringilla facilisis turpis, id fermentum felis fringilla vitae. Mauris a dolor euismod, ullamcorper justo id, fringilla enim. Ut dictum nunc nec mi efficitur pulvinar. Donec pretium faucibus augue, at tristique mauris rutrum sit amet. Nulla facilisi. Suspendisse non nisi mauris. Aliquam et pulvinar purus, ac finibus lorem. Donec ullamcorper nisi vitae tellus elementum venenatis. Aenean dapibus tincidunt purus, ac faucibus enim aliquet at. Sed pulvinar, nisi ac consectetur dapibus, nunc dui pulvinar dui, sed consectetur ipsum neque et dolor.                          \r\n                                                </p>                                                                                                ', 'http://local.prpassos/uploads/img/1687216233.png', 'engenharia-sanitária', 1, '2023-06-19 18:15:58', '2023-06-23 14:11:32', NULL),
 	(25, 'Geologia', 'Projetos de geologia', '                                                                              <p class="">                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum, enim vel ultrices volutpat, metus ligula ultricies enim, a interdum est est vitae lorem. Donec rutrum varius nunc, sed lacinia diam convallis eu. Suspendisse convallis massa vitae est consectetur, in fermentum est feugiat. Aliquam in tempor dui, sed consequat nisi. Morbi ac fringilla ipsum. Mauris fringilla facilisis turpis, id fermentum felis fringilla vitae. Mauris a dolor euismod, ullamcorper justo id, fringilla enim. Ut dictum nunc nec mi efficitur pulvinar. Donec pretium faucibus augue, at tristique mauris rutrum sit amet. Nulla facilisi. Suspendisse non nisi mauris. Aliquam et pulvinar purus, ac finibus lorem. Donec ullamcorper nisi vitae tellus elementum venenatis. Aenean dapibus tincidunt purus, ac faucibus enim aliquet at. Sed pulvinar, nisi ac consectetur dapibus, nunc dui pulvinar dui, sed consectetur ipsum neque et dolor.                        </p>                                                                        ', 'http://local.prpassos/uploads/img/1687215377.png', 'geologia', 1, '2023-06-19 18:16:21', '2023-06-23 14:11:36', NULL);
 
--- Copiando estrutura para tabela vmi.usuarios
+-- Copiando estrutura para tabela amde.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
@@ -345,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=150 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Copiando dados para a tabela vmi.usuarios: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela amde.usuarios: ~0 rows (aproximadamente)
 INSERT INTO `usuarios` (`id`, `nome`, `login`, `senha`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(149, 'Administrador', 'admin', '$2y$10$37aLjE0t8FBKXZD5E6amzuOsFjeV8RwflHI9NOpGDFCsCSFHCzcxK', '2023-01-17 16:00:03', '2023-02-03 15:43:34', NULL);
 
