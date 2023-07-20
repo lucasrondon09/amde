@@ -13,79 +13,30 @@ use CodeIgniter\I18n\Time;
 <div id="slider" class="slider home-1 overflow-hidden">
     <div class="slider-wrap slider-activation slider-nav-style-1">
         <!-- Start Single slide -->
+        <?php foreach ($banner as $bannerItem):?>
         <div class="single-slide slide-one slider-bg-1 d-flex align-items-end" data-overlay="5">
             <div class="container">
                 <div class="row gy-5 justify-content-center">
                     <div class="col-lg-8">
                         <div class="slider-content">
                             <div class="slider-content-inner">
-                                <h3>Welcome To Medico </h3>
-                                <h1>Medico Is Best In Medical</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                <h1><?= $bannerItem->titulo?></h1>
+                                <p><?= $bannerItem->texto?></p>
                                 <div class="slider-buttons">
-                                    <a href="#" class="ml-btn btn-light btn-large">Read More</a>
+                                    <a href="<?= $bannerItem->link?>" class="ml-btn btn-light btn-large">Saiba mais</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4">
                         <div class="slider-feature-img">
-                            <img src="<?= base_url('assets/site/picture/1.png')?>" alt="slider img">
+                            <img src="<?= $bannerItem->imagem?>" alt="slider img">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Single slide -->
-        <!-- Start Single slide -->
-        <div class="single-slide slide-one slider-bg-1 d-flex align-items-end" data-overlay="5">
-            <div class="container">
-                <div class="row gy-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="slider-content">
-                            <div class="slider-content-inner">
-                                <h3>Welcome To Medico </h3>
-                                <h1>Medico Is Best In Medical</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                                <div class="slider-buttons">
-                                    <a href="#" class="ml-btn btn-light btn-large">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="slider-feature-img">
-                            <img src="<?= base_url('assets/site/picture/1.png')?>" alt="slider img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Single slide -->
-        <!-- Start Single slide -->
-        <div class="single-slide slide-one slider-bg-1 d-flex align-items-end" data-overlay="5">
-            <div class="container">
-                <div class="row gy-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="slider-content">
-                            <div class="slider-content-inner">
-                                <h3>Welcome To Medico </h3>
-                                <h1>Medico Is Best In Medical</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                                <div class="slider-buttons">
-                                    <a href="#" class="ml-btn btn-light btn-large">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="slider-feature-img">
-                            <img src="<?= base_url('assets/site/picture/1.png')?>" alt="slider img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php endforeach;?>
         <!-- End Single slide -->
     </div>
 </div>

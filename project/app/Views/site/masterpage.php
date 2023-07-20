@@ -142,7 +142,7 @@
                                                 <li><a href="our-testimonial.html">Testimonial page</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact-page.html">Contact</a></li>
+                                        <li><a href="<?= base_url('/Contatos')?>">Contatos</a></li>
                                     </ul>
                                 </nav>
                             </div>

@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Site;
 
+use App\Models\Admin\EmailServidorModel;
 use CodeIgniter\Controller;
 use App\Models\Admin\EmailModel;
-use App\Models\Admin\ServicoModel;
-use App\Models\Admin\PaginasModel;
+use App\Models\Admin\EmailServidorModelModel;
 
 class Contatos extends Controller
 {
@@ -16,15 +16,7 @@ class Contatos extends Controller
 
         helper('form');
 
-        $this->modelServico	= new ServicoModel();
-
-        $this->data = 	[
-                            'servicos'          =>$this->modelServico->where('status', 1)->findAll()
-                        ];
-
-        echo view('site/header',$this->data);
-        echo view('site/contatos');
-        echo view('site/footer');
+        return view('site/contatos');
 
     }
 
@@ -37,96 +29,57 @@ class Contatos extends Controller
         $email = \Config\Services::email();
 
         $this->modelEmail = new EmailModel();
+        $this->modelServidorEmail = new EmailServidorModel();
+
+        $server = $this->modelServidorEmail->first();
 
         $config =       [
-            'protocol' => 'smtp',
-            'SMTPHost' => 'email-ssl.com.br',
-            'SMTPPort' => 465,
-            'SMTPUser' => 'site@axonsneurologia.com.br',
-            'SMTPPass' => 'Axons@2023',
+            'protocol' => $server->protocolo,
+            'SMTPHost' => $server->smtp_host,
+            'SMTPPort' => (int)$server->smtp_porta,
+            'SMTPUser' => $server->smtp_usuario,
+            'SMTPPass' => $server->smtp_senha,
             'wordWrap' => true,
-            'mailType' => 'html', 
-            'SMTPCrypto'=> 'ssl'
+            'mailType' => $server->tipo_email,
+            'SMTPCrypto'=> $server->smtp_criptografia
             ];                
 
-            $assunto = $this->request->getPost('assunto');
-            $emailSetTo = $this->modelEmail->where('assunto', $assunto)->find();
-          
+            $emailSetTo = $this->modelEmail->findAll();
 
-          
+              foreach($emailSetTo as $emailSetToItem){
 
-          foreach($emailSetTo as $emailSetToItem){
+                $email->initialize($config);
 
-            $email->initialize($config);
+                $email->setFrom($server->remetente, $server->descricao);
 
-            $email->setFrom('site@axonsneurologia.com.br', 'MENSAGEM DO SITE');
-            
-            $email->setTo($emailSetToItem->email);
+                $email->setTo($emailSetToItem->email);
 
-            $template = view('site/template-email', $this->request->getPost());
-            
-            $email->setSubject($assunto);
-            $email->setMessage($template);
-            
-            $sent = $email->send();
+                $template = view('site/template-email', $this->request->getPost());
+
+                $email->setSubject($this->request->getVar('assunto'));
+                $email->setMessage($template);
+
+                $sent = $email->send();
 
 
-          }
+              }
 
-          if(!$sent){
-                var_dump($email->printDebugger());exit;
+              if(!$sent){
+                    var_dump($email->printDebugger());exit;
 
 
-          }else{
+              }else{
 
-            $fields =   [
-                        'nome' => $this->request->getPost('nome'),
-                        'telefone' => $this->request->getPost('telefone'),
-                        'email' => $this->request->getPost('email')
-                        ];
+                $fields =   [
+                            'nome' => $this->request->getPost('nome'),
+                            'email' => $this->request->getPost('email')
+                            ];
 
-            $leads = leadsInsert($fields);
+                $leads = leadsInsert($fields);
 
-            return redirect()->to('/Obrigado');
-          }
+                return redirect()->to('/Obrigado');
+              }
 
     }
-
-    //--------------------------------------------------------------------
-    public function agendamentoConsulta()
-    {
-
-        helper('form');
-
-        $this->modelPaginas	= new PaginasModel();
-
-        $this->data =   [
-                            'medico'   => $this->modelPaginas->where('idCategoria', 1)->find()
-                        ];
-
-        echo view('site/header');
-        echo view('site/agendamento-consulta', $this->data);
-        echo view('site/footer');
-
-    }
-
-    //--------------------------------------------------------------------
-    public function agendamentoExame()
-    {
-
-        helper('form');
-
-        $this->modelServico = new ServicoModel();
-
-        $this->data = ['servico' => $this->modelServico->get()];
-
-        echo view('site/header');
-        echo view('site/agendamento-exame', $this->data);
-        echo view('site/footer');
-
-    }
-
-
-
 
 }

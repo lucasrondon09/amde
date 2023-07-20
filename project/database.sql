@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS `banners` (
 -- Copiando dados para a tabela amde.banners: ~4 rows (aproximadamente)
 INSERT INTO `banners` (`id`, `titulo`, `link`, `texto`, `posicao`, `status`, `imagem`, `imagem_responsiva`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(14, 'Neurologia Clinicia', '', '                          \r\n                        ', 1, 1, 'https://axonsneurologia.com.br/uploads/img/1676127695_c292a9a34de1b7649fa7.jpeg', NULL, '2023-02-11 11:01:35', '2023-02-11 11:02:05', '2023-02-11 11:02:05'),
-	(15, 'Neurologia Clínica', '', '                                                                                                                                  \r\n                                                                                                                        ', 1, 1, 'https://axonsneurologia.com.br/uploads/img/1677605823_edaee83c72594814e7de.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605823_b4a02c89654cc54ad2b4.jpg', '2023-02-11 11:01:53', '2023-02-28 13:37:03', NULL),
-	(16, 'Especialistas', '', '                                                                                                        \r\n                                                                                                ', 2, 1, 'https://axonsneurologia.com.br/uploads/img/1677605846_d2f572c936755b7bf423.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605846_7da774eae070cc441733.jpg', '2023-02-11 11:03:47', '2023-02-28 13:37:26', NULL),
-	(17, 'Atendimento', '', '                                                                                                        \r\n                                                                                                ', 3, 1, 'https://axonsneurologia.com.br/uploads/img/1677605873_292f125d9e7f0f524a58.jpg', 'https://axonsneurologia.com.br/uploads/img/1677605873_6034449762c54e486a64.jpg', '2023-02-11 11:04:44', '2023-02-28 13:37:53', NULL);
+	(15, 'Bem vindo a AMDE', 'https://amde.com.br', '                          Somos a Associação Mato-grossense de Deficientes.<br>Visamos a inclusão da pessoa com deficiência no mercado de trabalho e atuando como mediador dos interesses do empregado e empregador.                                                                                                                                                            \r\n                                                                                                                                                                                                ', 1, 1, 'http://local.amde/uploads/img/1689797089_fe8d0dc83674944b0d52.png', 'http://local.amde/uploads/img/1689797089_f87273d1196377301094.png', '2023-02-11 11:01:53', '2023-07-19 16:16:23', NULL),
+	(16, 'Banner 2', '', 'Texto do Banner 2', 2, 1, 'http://local.amde/uploads/img/1689797872_bd15e8b6b8a4a53c95f4.png', 'http://local.amde/uploads/img/1689797872_fc4c5e096c901378025f.png', '2023-02-11 11:03:47', '2023-07-19 16:19:28', NULL),
+	(17, 'Banner 3', '', 'Texto do Banner 3', 3, 1, 'http://local.amde/uploads/img/1689797927_2f62aa1a8350070708a0.png', 'http://local.amde/uploads/img/1689797927_a210aaf112f43681183f.png', '2023-02-11 11:04:44', '2023-07-19 16:18:47', NULL);
 
 -- Copiando estrutura para tabela amde.email
 CREATE TABLE IF NOT EXISTS `email` (
@@ -46,26 +46,38 @@ CREATE TABLE IF NOT EXISTS `email` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Copiando dados para a tabela amde.email: 14 rows
 /*!40000 ALTER TABLE `email` DISABLE KEYS */;
 INSERT INTO `email` (`id`, `email`, `assunto`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(1, 'site@axonsneurologia.com.br', 'Informações', '2023-02-16 11:06:35', '2023-02-16 11:51:04', '2023-02-16 11:51:04'),
-	(2, 'contato@axonsneurologia.com.br', 'Informações', '2023-02-16 11:06:48', '2023-02-16 11:46:48', '2023-02-16 11:46:48'),
-	(3, 'lucasrondon@gmail.com', 'Agendamento de Consulta', '2023-02-16 11:14:33', '2023-02-16 11:46:11', '2023-02-16 11:46:11'),
-	(4, 'site@axonsneurologia.com.br', 'Agendamento de Consulta', '2023-02-16 11:14:48', '2023-02-16 11:51:08', '2023-02-16 11:51:08'),
-	(5, 'site@axonsneurologia.com.br', 'Agendamento de Exame', '2023-02-16 11:32:01', '2023-02-16 11:51:12', '2023-02-16 11:51:12'),
-	(6, 'site@axonsneurologia.com.br', 'Dúvidas', '2023-02-16 11:46:25', '2023-02-16 11:51:15', '2023-02-16 11:51:15'),
-	(7, 'site@axonsneurologia.com.br', 'Sugestões', '2023-02-16 11:46:32', '2023-02-16 11:50:58', '2023-02-16 11:50:58'),
-	(8, 'site@axonsneurologia.com.br', 'Agendamento de Exame', '2023-02-16 11:46:39', '2023-02-16 11:46:57', '2023-02-16 11:46:57'),
-	(9, 'site@axonsneurologia.com.br', 'Informações', '2023-02-16 11:51:23', '2023-02-16 11:51:23', NULL),
-	(10, 'site@axonsneurologia.com.br', 'Sugestões', '2023-02-16 11:51:27', '2023-02-16 11:51:27', NULL),
-	(11, 'site@axonsneurologia.com.br', 'Reclamações', '2023-02-16 11:51:33', '2023-02-16 11:51:33', NULL),
-	(12, 'site@axonsneurologia.com.br', 'Agendamento de Consulta', '2023-02-16 11:51:38', '2023-02-16 11:51:38', NULL),
-	(13, 'site@axonsneurologia.com.br', 'Agendamento de Exame', '2023-02-16 11:51:44', '2023-02-16 11:51:44', NULL),
-	(14, 'izabela@email.com.br', 'Reclamações', '2023-02-24 09:52:11', '2023-02-24 09:52:57', '2023-02-24 09:52:57');
+	(15, 'atendimento@amde.com.br', 'Contatos', '2022-07-19 13:58:49', '2023-07-19 13:58:49', NULL),
+	(16, 'faleconosco@amde.com.br', 'Contatos', '2023-07-19 13:59:25', '2023-07-19 13:59:25', NULL);
 /*!40000 ALTER TABLE `email` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela amde.email_servidor
+CREATE TABLE IF NOT EXISTS `email_servidor` (
+  `id` int NOT NULL,
+  `descricao` varchar(999) COLLATE utf8mb4_general_ci DEFAULT '',
+  `protocolo` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `smtp_host` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `smtp_porta` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `smtp_usuario` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `smtp_senha` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `smtp_criptografia` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `tipo_email` varchar(50) COLLATE utf8mb4_general_ci DEFAULT '',
+  `remetente` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `deleted_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Copiando dados para a tabela amde.email_servidor: 0 rows
+/*!40000 ALTER TABLE `email_servidor` DISABLE KEYS */;
+INSERT INTO `email_servidor` (`id`, `descricao`, `protocolo`, `smtp_host`, `smtp_porta`, `smtp_usuario`, `smtp_senha`, `smtp_criptografia`, `tipo_email`, `remetente`, `created_at`, `updated_at`, `deleted_at`) VALUES
+	(0, 'Contato do Site', 'smtp', 'email-ssl.com.br', '465', 'site@lucasrondon.com.br', '123456', 'ssl', 'html', 'site@lucasrondon.com.br', '2023-07-19 13:58:49', '2023-07-19 15:50:10', '0000-00-00 00:00:00');
+/*!40000 ALTER TABLE `email_servidor` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela amde.galeria
 CREATE TABLE IF NOT EXISTS `galeria` (
@@ -149,18 +161,10 @@ CREATE TABLE IF NOT EXISTS `leads` (
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Copiando dados para a tabela amde.leads: 7 rows
+-- Copiando dados para a tabela amde.leads: 0 rows
 /*!40000 ALTER TABLE `leads` DISABLE KEYS */;
-INSERT INTO `leads` (`id`, `nome`, `email`, `telefone`, `cpf`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(1, NULL, 'lucasrondon@gmail.com', NULL, NULL, '2023-02-07 10:12:10', '2023-02-07 10:12:10', NULL),
-	(2, NULL, 'lucasrondon@hotmail.com', NULL, NULL, '2023-02-07 10:39:59', '2023-02-07 10:39:59', NULL),
-	(3, NULL, 'lucasrondon@email.com', NULL, NULL, '2023-03-01 22:26:11', '2023-03-01 23:22:22', '2023-03-01 23:22:22'),
-	(4, NULL, 'site@axonsneurologia.com.br', NULL, NULL, '2023-03-01 22:45:12', '2023-03-01 23:22:16', '2023-03-01 23:22:16'),
-	(5, 'LUCAS RAFAEL MUNIZ RONDON', 'rondonlucas@gmail.com', '65984518769', NULL, '2023-03-01 22:49:07', '2023-03-01 23:22:07', '2023-03-01 23:22:07'),
-	(6, 'LUCAS RAFAEL MUNIZ RONDON', 'lucas_rondon@gmail.com', '(65) 98451-8769', NULL, '2023-03-01 23:18:48', '2023-03-01 23:19:05', '2023-03-01 23:19:05'),
-	(7, NULL, 'lucas@email.com', NULL, NULL, '2023-06-19 15:04:32', '2023-06-19 15:04:32', NULL);
 /*!40000 ALTER TABLE `leads` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela amde.meta_tags

@@ -7,6 +7,7 @@ use App\Models\Admin\GoogleAnalyticsModel;
 use App\Models\Admin\MetaTagsModel;
 use App\Models\Admin\RedesSociaisModel;
 use App\Models\Admin\EmailModel;
+use App\Models\Admin\EmailServidorModel;
 
 class Configuracoes extends Controller
 {
@@ -20,6 +21,7 @@ class Configuracoes extends Controller
 		$this->modelMetaTags	    = new MetaTagsModel();
 		$this->modelRedesSociais	= new RedesSociaisModel();
 		$this->modelEmail	        = new EmailModel();
+		$this->modelEmailServidor   = new EmailServidorModel();
         $this->session              = session();
         $this->validation           = \Config\Services::validation();
 	}
@@ -158,7 +160,7 @@ class Configuracoes extends Controller
         }
 
         $this->data =   [
-                            'fields'    => $this->modelRedesSociais->get(1)
+                            'fields'    => $this->modelRedesSociais->first()
                         ];
         
 
@@ -351,6 +353,80 @@ class Configuracoes extends Controller
 
         }
     
+        return false;
+
+    }
+
+    //--------------------------------------------------------------------
+    public function emailServer()
+    {
+        helper('form');
+
+        if($this->request->getMethod() === 'post'){
+
+            if(csrf_hash() === $this->request->getVar('csrf_test_name'))
+            {
+
+                $rules = $this->validation->setRules    ([
+                                                            'descricao'          => ['label' => 'Descrição', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'protocolo'          => ['label' => 'Protocolo', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'smtp_host'          => ['label' => 'SMTP Host', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'smtp_porta'         => ['label' => 'SMTP Porta', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'smtp_usuario'       => ['label' => 'SMTP Usuário', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'smtp_senha'         => ['label' => 'SMTP Senha', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'smtp_criptografia'  => ['label' => 'SMTP Criptografia', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'tipo_email'         => ['label' => 'Tipo de E-mail', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                            'remetente'           => ['label' => 'Rementente', 'rules' => 'required|min_length[3]|max_length[255]'],
+                                                        ]);
+
+                if ($this->validation->withRequest($this->request)->run()){
+
+                    $id = $this->request->getVar('id');
+
+                    if($this->emailServerSave($id)){
+                        $alert = 'success';
+                        $message = 'O registro foi cadastrado com sucesso!';
+                    }else{
+                        $alert = 'error';
+                        $message = 'Não foi possível salvar o registro tente novamente!';
+                    }
+
+                    $this->session->setFlashdata($alert, $message);
+                    return redirect()->to('/Admin/Email/configurar-servidor');
+                }
+
+            }else{
+                $alert = 'error';
+                $message = 'Não foi possível salvar o registro, tente novamente!';
+
+                $this->session->setFlashdata($alert, $message);
+                return redirect()->to('/Admin/Email/configurar-servidor');
+            }
+        }
+
+        $this->data =   [
+                            'fields'    => $this->modelEmailServidor->first()
+                        ];
+
+        echo view('admin/template/header.php');
+        echo view('admin/template/sidebar.php');
+        echo view('admin/configuracoes/email-servidor.php', $this->data);
+        echo view('admin/template/footer.php');
+
+    }
+
+    //--------------------------------------------------------------------
+    private function emailServerSave($id)
+    {
+
+        $fields = 	$this->request->getPost();
+
+        if($this->modelEmailServidor->update($id, $fields)){
+
+            return true;
+
+        }
+
         return false;
 
     }

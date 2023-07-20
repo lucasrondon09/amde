@@ -14,7 +14,10 @@ class Home extends Controller
     //--------------------------------------------------------------------
     public function __construct()
 	{
-        $this->validation = \Config\Services::validation();
+
+      $this->modelNoticia	= new NoticiaModel();
+      $this->modelBanner = new BannerModel();
+
 	}
 
 
@@ -24,15 +27,16 @@ class Home extends Controller
         helper('text');
         setlocale(LC_TIME, 'pt_BR.utf-8');
 
-        $this->model	= new NoticiaModel();
+
         $this->data = 	[
-                            'noticia'   => $this->model->select('noticias.id as id, noticias.titulo as tituloNoticia, noticias.texto as texto, noticias_categorias.titulo as tituloCategoria, 
+                            'noticia'   => $this->modelNoticia->select('noticias.id as id, noticias.titulo as tituloNoticia, noticias.texto as texto, noticias_categorias.titulo as tituloCategoria, 
                                                                         noticias.capa as capa, noticias.dataNoticia as dataNoticia, noticias.slug as slug, noticias.visualizacoes as visualizacoes')
                                 ->join('noticias_categorias', 'noticias.idCategoria = noticias_categorias.id')
                                 ->where('status', 1)
                                 ->limit(3)
                                 ->orderBy('noticias.dataNoticia desc')
-                                ->find()
+                                ->find(),
+                            'banner'    => $this->modelBanner->where('status', '1')->orderBy('posicao', 'asc')->findAll()
                         ];
 
         return view('site/index.php', $this->data);

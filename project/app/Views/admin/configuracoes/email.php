@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Email</h1>
+            <h1>E-mail</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url('Admin/home')?>">Home</a></li>
-              <li class="breadcrumb-item active">Email</li>
+              <li class="breadcrumb-item active">E-mail</li>
             </ol>
             
           </div>
@@ -21,6 +21,9 @@
             <a href="<?= base_url('Admin/Email/cadastrar')?>" class="btn btn-primary">
               <i class="fas fa-plus fa-fw"></i>
               Cadastrar
+            </a>
+            <a href="<?= base_url('Admin/Email/configurar-servidor')?>" class="btn btn-outline-primary">
+              Configurar Servidor
             </a>
           </div>
         </div>

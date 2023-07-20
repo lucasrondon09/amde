@@ -40,6 +40,9 @@ $routes->set404Override();
 //Site
 //-------------------------------------------------------------------------
 $routes->get('/', 'Site\Home::index');
+$routes->get('/Contatos', 'Site\Contatos::contatos');
+$routes->post('/Contatos', 'Site\Contatos::sendMail');
+
 $routes->get('/Home', 'Site\Home::home');
 $routes->post('/Home/newsletter', 'Site\Home::newsletter');
 $routes->get('/Sobre', 'Site\QuemSomos::sobre');
@@ -123,6 +126,7 @@ $routes->add('/Admin/MetaTags', 'Admin\Configuracoes::metaTags');
 $routes->add('/Admin/RedesSociais', 'Admin\Configuracoes::redesSociais');
 $routes->add('/Admin/Email', 'Admin\Configuracoes::email');
 $routes->add('/Admin/Email/cadastrar', 'Admin\Configuracoes::emailCreate');
+$routes->add('/Admin/Email/configurar-servidor', 'Admin\Configuracoes::emailServer');
 $routes->add('/Admin/Email/editar/(:num)', 'Admin\Configuracoes::emailEdit/$1');
 $routes->add('/Admin/Email/excluir/(:num)', 'Admin\Configuracoes::emailDelete/$1');
 //-------------------------------------------------------------------------

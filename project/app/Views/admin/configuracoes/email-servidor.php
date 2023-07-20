@@ -16,7 +16,7 @@ $validate = \Config\Services::validation();
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url('Admin/home')?>">Home</a></li>
               <li class="breadcrumb-item"><a href="<?= base_url('Admin/Email')?>">E-mail</a></li>
-              <li class="breadcrumb-item active">Cadastrar</li>
+              <li class="breadcrumb-item active">Configurar Servidor</li>
             </ol>
           </div>
         </div>
@@ -35,8 +35,8 @@ $validate = \Config\Services::validation();
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                   </svg>
-                </a>               
-                Novo Registro
+                </a>
+                Configurar Servidor de E-mail
               </h3>
               <!-- form start -->
               <?php
@@ -77,16 +77,45 @@ $validate = \Config\Services::validation();
                   <span class="text-danger"><?= $validate->listErrors(); ?></span>
                 </div>
               </div>
-              <?= form_open(base_url('Admin/Email/cadastrar')) ?>
+              <?= form_open(base_url('Admin/Email/configurar-servidor')) ?>
               <?= csrf_field() ?>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="nome">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" value="<?= set_value('email') ?>">
+                        <label for="nome">Descrição</label>
+                        <input type="text" class="form-control" name="descricao" value="<?= $fields->id?>" hidden="hidden">
+                        <input type="text" class="form-control" name="descricao" value="<?= $fields->descricao?>">
                     </div>
                     <div class="form-group">
-                        <label for="nome">Assunto</label>
-                        <input type="text" class="form-control" id="email" name="assunto" value="<?= set_value('assunto') ?>">
+                        <label for="nome">Protocolo</label>
+                        <input type="text" class="form-control" name="protocolo" value="<?= $fields->protocolo?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">SMTP Host</label>
+                        <input type="text" class="form-control" name="smtp_host" value="<?= $fields->smtp_host?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">SMTP Porta</label>
+                        <input type="text" class="form-control" name="smtp_porta" value="<?= $fields->smtp_porta?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">SMTP Usuário</label>
+                        <input type="text" class="form-control" name="smtp_usuario" value="<?= $fields->smtp_usuario?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">SMTP Senha</label>
+                        <input type="text" class="form-control" name="smtp_senha" value="<?= $fields->smtp_senha?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">SMTP Criptografia</label>
+                        <input type="text" class="form-control" name="smtp_criptografia" value="<?= $fields->smtp_criptografia?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Tipo de E-mail</label>
+                        <input type="text" class="form-control" name="tipo_email" value="<?= $fields->tipo_email?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Remetente</label>
+                        <input type="text" class="form-control" name="remetente" value="<?= $fields->remetente?>">
                     </div>
                 </div>
                 <!-- /.card-body -->
